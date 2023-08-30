@@ -91,7 +91,15 @@ function App(): JSX.Element {
 
 			<main>
 				<div className='cards__wrapper'>
-					<CatCard />
+
+					{cats.map(cat => (
+						<CatCard
+							name={cat.name}
+							species={cat.species}
+							food={cat.favFoods}
+							birth={cat.birthYear}
+						/>
+					))}
 				</div>
 			</main>
 
