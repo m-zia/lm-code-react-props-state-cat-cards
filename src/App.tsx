@@ -87,7 +87,7 @@ function App(): JSX.Element {
 			species: "Sea Cattain",
 			favFoods: ["fish, rum"],
 			birthYear: 2016,
-		  }
+		}
 	]);
 
 	//For the <Header />
@@ -104,6 +104,7 @@ function App(): JSX.Element {
 
 					{cats.map((cat, index) => (
 						<CatCard
+							key={index}
 							name={cat.name}
 							species={cat.species}
 							food={cat.favFoods}
